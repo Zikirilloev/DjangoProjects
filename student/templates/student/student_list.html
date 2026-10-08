@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+</head>
+<body>
+
+    <h1>Studentlar</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Client</th>
+            <th>Address</th>
+            <th>Phone</th>
+        </tr>
+
+        {% for student in students %}
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.client }}</td>
+            <td>{{ student.address }}</td>
+            <td>{{ student.phone }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">Hozircha student yo'q</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
